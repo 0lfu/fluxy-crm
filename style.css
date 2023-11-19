@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap');
+
+:root {
+    --accentColor: #d9455d;
+    /*--sidebarBg: #3778a2;*/
+    --sidebarBg: #fdfdfd;
+    --mainBg: #f4f6fb;
+    --fontLight: #a5b5ce;
+    --fontDark: black;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    background-color: var(--mainBg);
+}
+
+html {
+    height: -webkit-fill-available;
+}
+a{
+    color: var(--fontLight);
+    text-decoration: none;
+}
+main {
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.sidebar
+{
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 20px 20px;
+    background-color: var(--sidebarBg);
+    gap: 5px;
+    /*border-radius: 0 15px 15px 0;*/
+    /*box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;*/
+}
+.sidebar .logo{
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar .logo img{
+    width: 80%;
+}
+.sidebar .label{
+    font-weight: 700;
+    font-size: 18px;
+    color: #757f8f;
+}
+.sidebar .item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+.sidebar .item:hover{
+    background-color: rgba(0,0,0,0.05);
+}
+.active{
+    background-color: rgba(0,0,0,0.05);
+}
+.active > p{
+    color: var(--fontDark);
+}
+.active > i{
+    color: var(--accentColor);
+}
+.sidebar .item i, .sidebar .item p{
+    font-size: 20px;
+}
+.sidebar .item i{
+    width: 25px;
+    margin: 0 20px 0 10px;
+}
+.sidebar .item p{
+    font-weight: 600;
+}
+.sidebar .logout{
+    margin-top: auto;
+}
+.header{
+    position: fixed;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 160px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    z-index: 999;
+    background-color: var(--mainBg);
+}
+.header h2{
+    font-size: 36px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+.header .header-deals{
+    color: rgb(253, 132, 103)!important;
+    background-color: rgb(252, 232, 227)!important;
+    font-weight: 700;
+}
+.header .header-income{
+    color: rgb(38, 131, 253)!important;
+    background-color: rgb(222, 236, 253)!important;
+    font-weight: 700;
+}
+.header .header-item{
+    background-color: #eee;
+    padding: 15px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 15px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .header-profile{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: 0;
+}
+.header .header-search{
+    width: 500px;
+    padding: 0;
+}
+.header .header-search .search{
+    width: 100%;
+    height: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 20px;
+    font-size: inherit;
+}
+.header .header-profile img{
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.main{
+    width: calc(100% - 300px);
+    height: auto;
+    position: absolute;
+    left: 300px;
+    top: 160px;
+    padding: 5px 30px 30px 30px;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
